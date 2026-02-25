@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manoj </title>
+  <meta name="description"
+    content="Portfolio of Manoj Sanagapalli, an AI & Machine Learning Engineer specializing in intelligent systems and simulations." />
+
+  <!-- Tailwind CSS CDN — needed for Live Server (no build step).           -->
+  <!-- In Vite dev mode, @tailwind directives in style.css take precedence. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { accent: '#10B981' },
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Styles (PostCSS/Vite processes @tailwind directives in dev) -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body class="antialiased bg-[#050507] text-text-primary selection:bg-accent/20 selection:text-accent overflow-x-hidden">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 nav-glass border-b border-white/[0.05] transition-all duration-500" id="navbar">
+    <div class="navbar-inner">
+
+      <!-- Icons: Left -->
+      <div class="nav-icons">
+        <a href="tel:+918309478980" class="nav-icon-link" aria-label="Phone">
+          <i data-lucide="phone" class="w-5 h-5"></i>
+        </a>
+        <a href="mailto:shvsmanoj2007@gmail.com" class="nav-icon-link" aria-label="Email">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+        </a>
+        <a href="https://github.com/Manoj-Sanagapalli20" target="_blank" rel="noopener noreferrer" class="nav-icon-link"
+          aria-label="GitHub">
+          <i data-lucide="github" class="w-5 h-5"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/manoj-sanagapalli-663109335" target="_blank" rel="noopener noreferrer"
+          class="nav-icon-link" aria-label="LinkedIn">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+      </div>
+
+      <!-- Links: Right -->
+      <div class="nav-links">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section relative flex flex-col justify-center overflow-hidden">
+    <div class="layout-container w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center w-full">
+
+        <!-- Left: Content -->
+        <div class="flex flex-col items-start z-10 reveal">
+          <div
+            class="inline-flex items-center px-3 py-1 rounded-full border border-accent/20 bg-accent/5 text-accent text-[11px] font-bold tracking-wide mb-8 uppercase shadow-[0_0_15px_rgba(16,185,129,0.15)]">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent mr-2 animate-pulse"></span>
+            Open to Opportunities
+          </div>
+
+          <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 text-white leading-[1.1]">
+            Manoj <br />
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">Sanagapalli</span>
+          </h1>
+
+          <h2 class="text-lg md:text-xl font-medium text-text-secondary mb-8 flex items-center h-8">
+            <span class="w-8 h-[2px] bg-gradient-to-r from-accent to-transparent mr-4"></span>
+            <span class="typing-cursor font-mono" id="typing-text"></span>
+          </h2>
+
+          <p class="text-text-secondary text-base md:text-lg max-w-lg leading-relaxed mb-10 text-justify hyphens-auto">
+            Focused on developing high-fidelity simulations and scalable AI solutions, transforming theoretical Machine
+            Learning concepts into production-ready systems.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})"
+              class="btn-glow-primary">
+              Explore Projects
+            </button>
+
+            <a href="/Manoj_Sanagapalli_Resume.pdf" download="Manoj_Sanagapalli_Resume.pdf" class="btn-glass-secondary">
+              Download Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Runtime Console & Code Loop -->
+        <div class="flex justify-center lg:justify-end items-center relative reveal delay-200">
+          <div class="status-panel-container">
+            <!-- System Status Header -->
+            <div class="system-header">
+              <div class="system-status-bar">
+                <div class="sys-dot"></div>
+                <span class="sys-primary">CORE SYSTEM ONLINE</span>
+                <span class="sys-secondary" id="sys-typing-wrap"><span id="sys-typed-text"></span><span
+                    class="sys-cursor" aria-hidden="true">|</span></span>
+              </div>
+              <div class="signal-line-wrap">
+                <div class="signal-line"></div>
+              </div>
+            </div>
+
+            <!-- Identity Section -->
+            <div class="identity-orbit-container">
+              <!-- Central Content -->
+              <div class="central-identity">
+                <h3 class="text-xs font-bold tracking-[0.2em] text-white/50 mb-2">BUILDING SYSTEMS</h3>
+                <div class="status-active-pill">
+                  <div class="status-pulse-dot"></div>
+                  <span>ACTIVE</span>
+                </div>
+              </div>
+
+              <!-- Depth Orbit Rings -->
+              <div class="orbit-circle-outer"></div>
+              <div class="orbit-circle-inner"></div>
+
+              <!-- Tech Stack Planets -->
+              <div class="orbit-item" style="--angle: 0deg;">
+                <div class="planet" title="Python"><i class="fa-brands fa-python"></i></div>
+              </div>
+              <div class="orbit-item" style="--angle: 32.7deg;">
+                <div class="planet" title="Java"><i class="fa-brands fa-java"></i></div>
+              </div>
+              <div class="orbit-item" style="--angle: 65.4deg;">
+                <div class="planet" title="C++"><i class="fa-solid fa-terminal"></i></div>
+              </div>
+              <div class="orbit-item" style="--angle: 98.1deg;">
+                <div class="planet" title="C"><i class="fa-solid fa-microchip"></i></div>
+              </div>
+              <div class="orbit-item" style="--angle: 130.8deg;">
+                <div class="planet" title="JavaScript"><i class="fa-brands fa-js"></i></div>
+              </div>
+              <div class="orbit-item" style="--angle: 163.5deg;">
+                <div class="planet" title="React"><i class="fa-brands fa-react"></i></div>
+              </div>
+              <div class="orbit-item" style="--angle: 196.2deg;">
+                <div class="planet" title="Node.js"><i class="fa-brands fa-node-js"></i></div>
+              </div>
+              <div class="orbit-item" style="--angle: 228.9deg;">
+                <div class="planet" title="TensorFlow"><i class="fa-solid fa-gears"></i></div>
+              </div>
+              <div class="orbit-item" style="--angle: 261.6deg;">
+                <div class="planet" title="Git"><i class="fa-brands fa-git-alt"></i></div>
+              </div>
+              <div class="orbit-item" style="--angle: 294.3deg;">
+                <div class="planet" title="SQL"><i class="fa-solid fa-database"></i></div>
+              </div>
+              <div class="orbit-item" style="--angle: 327deg;">
+                <div class="planet" title="VS Code"><i class="fa-solid fa-file-code"></i></div>
+              </div>
+            </div>
+
+            <!-- Secondary Status Label -->
+            <div class="runtime-status-bar">
+              <div class="status-pulse-dot"></div>
+              <span>Runtime Active</span>
+            </div>
+
+            <!-- Code Animation Section -->
+            <div class="mini-code-block" id="developer-code">
+              <div class="typing-container">
+                <div id="code-content"></div><span class="cursor-blink"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BOTTOM RUNTIME: Code Typewriter (isolated IIFE) ── -->
+  <script>
+      (function runtimeTyper() {
+        // Segment list: each has the text to type and a CSS class for colour
+        var SEGMENTS = [
+          { text: 'class ', cls: 'code-keyword' },
+          { text: 'Developer', cls: 'code-type' },
+          { text: ':', cls: '' },
+          { text: '\n\n  ', cls: '' },
+          { text: 'def ', cls: 'code-keyword' },
+          { text: 'solve', cls: 'code-func' },
+          { text: '(self, problem):', cls: '' },
+          { text: '\n    solution = ', cls: '' },
+          { text: 'design', cls: 'code-func' },
+          { text: '(problem)', cls: '' },
+          { text: '\n    ', cls: '' },
+          { text: 'test', cls: 'code-func' },
+          { text: '(solution)', cls: '' },
+          { text: '\n    ', cls: '' },
+          { text: 'return ', cls: 'code-keyword' },
+          { text: 'deploy', cls: 'code-func' },
+          { text: '(solution)', cls: '' },
+          { text: '\n\n', cls: '' },
+          { text: 'while ', cls: 'code-keyword' },
+          { text: 'challenges', cls: 'code-type' },
+          { text: ':', cls: '' },
+          { text: '\n  ', cls: '' },
+          { text: 'Developer', cls: 'code-type' },
+          { text: '().', cls: '' },
+          { text: 'solve', cls: 'code-func' },
+          { text: '(', cls: '' },
+          { text: 'next_problem', cls: 'code-func' },
+          { text: '())', cls: '' }
+        ];
+
+        var CHAR_DELAY = 40;   // ms per character typed
+        var HOLD_DELAY = 2000; // ms pause after full snippet
+        var ERASE_DELAY = 150; // ms per line erased
+        var RESET_DELAY = 1000; // ms before restart
+
+        var container = document.getElementById('code-content');
+        if (!container) return; // safety guard
+
+        function wait(ms) {
+          return new Promise(function (res) { setTimeout(res, ms); });
+        }
+
+        async function runLoop() {
+          while (true) {
+            /* ── CLEAR ── */
+            container.innerHTML = '';
+            var lineDiv = document.createElement('div');
+            lineDiv.className = 'code-line';
+            container.appendChild(lineDiv);
+
+            /* ── TYPE ── */
+            for (var s = 0; s < SEGMENTS.length; s++) {
+              var seg = SEGMENTS[s];
+              var parts = seg.text.split('\n');
+              for (var p = 0; p < parts.length; p++) {
+                if (p > 0) {
+                  lineDiv = document.createElement('div');
+                  lineDiv.className = 'code-line';
+                  container.appendChild(lineDiv);
+                }
+                if (parts[p]) {
+                  var span = document.createElement('span');
+                  if (seg.cls) span.className = seg.cls;
+                  lineDiv.appendChild(span);
+                  for (var c = 0; c < parts[p].length; c++) {
+                    span.textContent += parts[p][c];
+                    await wait(CHAR_DELAY);
+                  }
+                }
+              }
+            }
+
+            /* ── HOLD ── */
+            await wait(HOLD_DELAY);
+
+            /* ── ERASE (line-by-line, bottom→top) ── */
+            var lines = container.querySelectorAll('.code-line');
+            for (var i = lines.length - 1; i >= 0; i--) {
+              lines[i].style.opacity = '0';
+              lines[i].style.transform = 'translateX(-10px)';
+              lines[i].style.transition = 'all 0.3s ease';
+              await wait(ERASE_DELAY);
+              lines[i].remove();
+            }
+
+            /* ── RESET ── */
+            await wait(RESET_DELAY);
+          }
+        }
+
+        /* Start immediately — hero panel is always visible on load */
+        window.addEventListener('DOMContentLoaded', runLoop);
+      })();
+  </script>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 relative overflow-hidden">
+    <div class="layout-container">
+      <div class="section-glass reveal">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center text-justify hyphens-auto">
+          <!-- Left: Text Content -->
+          <div class="reveal">
+            <!-- Profile Photo -->
+            <div class="mb-10 flex justify-center lg:justify-start">
+              <div
+                class="relative w-56 h-56 md:w-64 md:h-64 rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-2xl shadow-accent/[0.03] hover:-translate-y-1 transition-all duration-300 group">
+                <img src="/profile.jpeg" alt="Manoj Sanagapalli"
+                  class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
+                <div class="absolute inset-0 border border-white/10 rounded-2xl pointer-events-none"></div>
+              </div>
+            </div>
+            <h2 class="text-xs font-bold text-accent tracking-widest mb-6 uppercase">Profile</h2>
+            <h3 class="text-3xl font-bold text-white mb-6">Technical Precision</h3>
+            <div class="space-y-6 text-text-secondary text-base leading-relaxed">
+              <p>
+                Currently pursuing B.Tech in <span class="text-white font-medium">Artificial Intelligence &amp; Machine
+                  Learning</span> at
+                <span class="text-white font-medium">VIT-AP University</span> (CGPA: 8.75), with a strong focus on
+                scalable system design, algorithmic problem-solving, and predictive modeling.
+              </p>
+              <p>
+                My expertise spans full-stack AI integration — designing data pipelines, training models, deploying
+                scalable services, and building intuitive interfaces. I actively deepen my knowledge in
+                <span class="text-white font-medium">Data Structures and Algorithms</span> to refine computational
+                efficiency and write optimized, production-grade code.
+              </p>
+              <p>
+                As a <span class="text-white font-medium">National Finalist at CTRL+SPACE</span>, I have proven my
+                ability to build functional prototypes under high-pressure environments.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Education & Recognition -->
+          <div class="reveal delay-100 flex flex-col gap-12">
+            <!-- Academic Timeline -->
+            <div>
+              <h4 class="text-xs font-bold text-accent tracking-widest mb-8 uppercase">Academic Timeline</h4>
+              <div class="space-y-8 border-l border-white/10 ml-3">
+                <!-- Item 1 -->
+                <div class="relative pl-8 group">
+                  <div
+                    class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#050507] border border-accent shadow-[0_0_8px_rgba(16,185,129,0.5)]">
+                  </div>
+                  <div class="mb-1">
+                    <span class="text-[10px] font-mono text-accent mb-1 block">2024 – Present</span>
+                  </div>
+                  <h3 class="text-base font-bold text-white">B.Tech in Computer Science (AIML)</h3>
+                  <p class="text-xs text-text-secondary mb-1">VIT-AP University</p>
+                  <div class="text-[10px] font-medium text-white/80">CGPA: <span class="text-white">8.75 / 10.0</span>
+                  </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="relative pl-8 group">
+                  <div
+                    class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#050507] border border-white/20 group-hover:border-white transition-colors">
+                  </div>
+                  <div class="mb-1">
+                    <span class="text-[10px] font-mono text-text-secondary mb-1 block">2022 – 2024</span>
+                  </div>
+                  <h3 class="text-base font-bold text-white">Higher Secondary Education</h3>
+                  <p class="text-xs text-text-secondary mb-1">Krishna Reddy College</p>
+                  <div class="text-[10px] font-medium text-text-secondary">Score: 95.1%</div>
+                </div>
+                <!-- Item 3 -->
+                <div class="relative pl-8 group">
+                  <div
+                    class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#050507] border border-white/20 group-hover:border-white transition-colors">
+                  </div>
+                  <div class="mb-1">
+                    <span class="text-[10px] font-mono text-text-secondary mb-1 block">2022</span>
+                  </div>
+                  <h3 class="text-base font-bold text-white">Secondary Education</h3>
+                  <p class="text-xs text-text-secondary mb-1">VSEM High School</p>
+                  <div class="text-[10px] font-medium text-text-secondary">Score: 568 / 600</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recognition Card -->
+            <div class="glass-card p-8 relative overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              </div>
+              <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-4">
+                  <i data-lucide="award" class="w-5 h-5 text-accent"></i>
+                  <span
+                    class="text-[10px] font-bold bg-accent/10 text-accent px-2 py-0.5 rounded border border-accent/20 tracking-wide uppercase">National
+                    Finalist</span>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-3">CTRL+SPACE Hackathon</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">
+                  National Finalist (Top 5 Nationwide)
+                  <br>
+                  Led the development of a scalable AI solution under strict time constraints, advancing Team VOID to a
+                  Top 5 national ranking.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-32 relative">
+    <div class="layout-container">
+      <div class="section-glass reveal">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <h2 class="text-xs font-bold text-accent tracking-widest mb-3 uppercase">Deployments</h2>
+            <h3 class="text-3xl font-bold text-white">Selected Works</h3>
+          </div>
+          <a href="https://github.com/Manoj-Sanagapalli20" target="_blank"
+            class="hidden md:inline-flex items-center text-xs font-medium text-text-secondary hover:text-white transition-colors mt-4 md:mt-0 group border-b border-transparent hover:border-white pb-0.5">
+            View GitHub Repository <i data-lucide="arrow-right"
+              class="w-3 h-3 ml-2 transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+
+        <!-- Project Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Project 1 -->
+          <article class="proj-card group reveal flex flex-col overflow-hidden">
+            <!-- Top accent line -->
+            <div class="proj-card-accent"></div>
+            <!-- Image -->
+            <div class="proj-img-wrap">
+              <div class="proj-img-bg"
+                style="background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1080&auto=format&fit=crop')">
+              </div>
+              <div class="proj-img-overlay"></div>
+              <span class="proj-number">01</span>
+            </div>
+            <!-- Body -->
+            <div class="proj-body flex-1 flex flex-col">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-lg font-bold text-white group-hover:text-accent transition-colors leading-snug">Cosmic
+                  Explorer</h3>
+                <i data-lucide="arrow-up-right"
+                  class="w-4 h-4 text-white/30 group-hover:text-accent transition-colors flex-shrink-0 mt-0.5"></i>
+              </div>
+              <p class="text-text-secondary text-sm leading-relaxed flex-1 mb-5 text-justify hyphens-auto">
+                A high-fidelity 3D space mission simulator with an integrated AI assistant for mission control and a
+                custom physics engine for orbital intercept calculations.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="proj-badge">JavaScript</span>
+                <span class="proj-badge">AI Integration</span>
+                <span class="proj-badge">Simulation</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://cosmic-explorer-lake.vercel.app/" target="_blank" class="proj-link-primary">
+                  <i data-lucide="external-link" class="w-3 h-3"></i> Live Demo
+                </a>
+                <span class="proj-link-sep">·</span>
+                <a href="https://github.com/Manoj-Sanagapalli20/" target="_blank" class="proj-link-secondary">
+                  <i data-lucide="github" class="w-3 h-3"></i> Source
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="proj-card group reveal delay-100 flex flex-col overflow-hidden">
+            <div class="proj-card-accent"></div>
+            <div class="proj-img-wrap">
+              <div class="proj-img-bg"
+                style="background-image:url('https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1080&auto=format&fit=crop')">
+              </div>
+              <div class="proj-img-overlay"></div>
+              <span class="proj-number">02</span>
+            </div>
+            <div class="proj-body flex-1 flex flex-col">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-lg font-bold text-white group-hover:text-accent transition-colors leading-snug">GitHub
+                  Profile Viewer</h3>
+                <i data-lucide="arrow-up-right"
+                  class="w-4 h-4 text-white/30 group-hover:text-accent transition-colors flex-shrink-0 mt-0.5"></i>
+              </div>
+              <p class="text-text-secondary text-sm leading-relaxed flex-1 mb-5 text-justify hyphens-auto">
+                A sophisticated data visualization platform interfacing with the GitHub REST API to deliver real-time
+                insights, repository analytics, and contribution trends.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="proj-badge">HTML</span>
+                <span class="proj-badge">CSS</span>
+                <span class="proj-badge">REST API</span>
+                <span class="proj-badge">JavaScript</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://github-profile-viewer-black-mu.vercel.app/" target="_blank" class="proj-link-primary">
+                  <i data-lucide="external-link" class="w-3 h-3"></i> Live Demo
+                </a>
+                <span class="proj-link-sep">·</span>
+                <a href="https://github.com/Manoj-Sanagapalli20/Github-profile-viewer" target="_blank"
+                  class="proj-link-secondary">
+                  <i data-lucide="github" class="w-3 h-3"></i> Source
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="proj-card group reveal delay-200 flex flex-col overflow-hidden">
+            <div class="proj-card-accent"></div>
+            <div class="proj-img-wrap">
+              <div class="proj-img-bg"
+                style="background-image:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1080&auto=format&fit=crop')">
+              </div>
+              <div class="proj-img-overlay"></div>
+              <span class="proj-number">03</span>
+            </div>
+            <div class="proj-body flex-1 flex flex-col">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-lg font-bold text-white group-hover:text-accent transition-colors leading-snug">Health
+                  Risk Predictor</h3>
+                <i data-lucide="arrow-up-right"
+                  class="w-4 h-4 text-white/30 group-hover:text-accent transition-colors flex-shrink-0 mt-0.5"></i>
+              </div>
+              <p class="text-text-secondary text-sm leading-relaxed flex-1 mb-5 text-justify hyphens-auto">
+                An end-to-end ML pipeline for Health-risk Score prediction implementing Linear, Ridge, and Lasso
+                regression models with high-accuracy score prediction.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="proj-badge">Python</span>
+                <span class="proj-badge">NumPy</span>
+                <span class="proj-badge">Pandas</span>
+                <span class="proj-badge">Scikit-Learn</span>
+                <span class="proj-badge">EDA</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://github.com/Manoj-Sanagapalli20/Health-RiskScore-Prediction" target="_blank"
+                  class="proj-link-primary">
+                  <i data-lucide="github" class="w-3 h-3"></i> View Source
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+  </section>
+  <!-- Technical Skills Section -->
+  <section id="skills" class="py-32 relative overflow-hidden">
+    <div class="layout-container">
+      <div class="section-glass reveal">
+        <div class="mb-16 reveal text-center lg:text-left">
+          <h3 class="text-3xl font-bold text-white tracking-tight">Core Skills</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- 1) Programming Languages -->
+          <article class="glass-card skill-card reveal p-8">
+            <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Programming Languages</h4>
+            <div class="skill-tag-container">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+            </div>
+          </article>
+
+          <!-- 2) Frameworks -->
+          <article class="glass-card skill-card reveal delay-100 p-8">
+            <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Frameworks</h4>
+            <div class="skill-tag-container">
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">Scikit-Learn</span>
+              <span class="skill-tag">Matplotlib</span>
+              <span class="skill-tag">Seaborn</span>
+            </div>
+          </article>
+
+          <!-- 3) Tools -->
+          <article class="glass-card skill-card reveal delay-200 p-8">
+            <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Tools</h4>
+            <div class="skill-tag-container">
+              <span class="skill-tag">Excel</span>
+              <span class="skill-tag">PowerPoint</span>
+              <span class="skill-tag">Tableau</span>
+              <span class="skill-tag">MySQL</span>
+            </div>
+          </article>
+
+          <!-- 4) Platforms -->
+          <article class="glass-card skill-card reveal delay-300 p-8">
+            <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Platforms</h4>
+            <div class="skill-tag-container">
+              <span class="skill-tag">PyCharm</span>
+              <span class="skill-tag">Jupyter Notebook</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">IntelliJ IDEA</span>
+            </div>
+          </article>
+
+          <!-- 5) Core CS Concepts -->
+          <article class="glass-card skill-card reveal delay-100 p-8">
+            <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Core CS</h4>
+            <div class="skill-tag-container">
+              <span class="skill-tag">OOPs</span>
+              <span class="skill-tag">DSA</span>
+              <span class="skill-tag">Machine Learning</span>
+            </div>
+          </article>
+
+          <!-- 6) Developer Tools -->
+          <article class="glass-card skill-card reveal delay-200 p-8">
+            <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Development Tools</h4>
+            <div class="skill-tag-container">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">Version Control</span>
+            </div>
+          </article>
+
+          <!-- 7) Soft Skills -->
+          <article class="glass-card skill-card reveal delay-300 p-8">
+            <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Soft Skills</h4>
+            <div class="skill-tag-container">
+              <span class="skill-tag">Problem Solving</span>
+              <span class="skill-tag">Time Management</span>
+              <span class="skill-tag">Leadership</span>
+              <span class="skill-tag">Communication</span>
+            </div>
+          </article>
+
+          <!-- 8) Languages Known -->
+          <article class="glass-card skill-card reveal delay-400 p-8">
+            <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Communication </h4>
+            <div class="skill-tag-container">
+              <span class="skill-tag">English</span>
+              <span class="skill-tag">Hindi</span>
+              <span class="skill-tag">Telugu</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Leadership & Certifications Section -->
+  <section id="certifications" class="py-24 relative">
+    <div class="layout-container">
+      <div class="section-glass reveal">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <!-- Leadership Column -->
+          <div class="reveal">
+            <h2 class="text-xs font-bold text-accent tracking-widest mb-6 uppercase">Experience</h2>
+            <h3 class="text-3xl font-bold text-white mb-8">Leadership Roles</h3>
+            <div class="space-y-4">
+              <!-- Role 1 -->
+              <div class="glass-card p-6 group">
+                <div class="flex justify-between items-start mb-2">
+                  <h4 class="text-lg font-bold text-white group-hover:text-accent transition-colors">Team Lead</h4>
+                  <span
+                    class="text-[10px] font-mono text-text-secondary border border-white/10 px-2 py-0.5 rounded">Hackathon</span>
+                </div>
+                <p class="text-sm text-text-secondary leading-relaxed">Led frontend development and AI integration,
+                  managed GitHub repositories, and coordinated project delivery.</p>
+              </div>
+              <!-- Role 2 -->
+              <div class="glass-card p-6 group">
+                <h4 class="text-lg font-bold text-white group-hover:text-accent transition-colors">Marketing Team Lead
+                </h4>
+                <p class="text-sm text-text-secondary">Machine Learning Club, VIT-AP</p>
+              </div>
+              <!-- Role 3 -->
+              <div class="glass-card p-6 group">
+                <h4 class="text-lg font-bold text-white group-hover:text-accent transition-colors">Marketing Head
+                </h4>
+                <p class="text-sm text-text-secondary">TEDxVITAP 2025</p>
+              </div>
+              <!-- Role 4 -->
+              <div class="glass-card p-6 group">
+                <h4 class="text-lg font-bold text-white group-hover:text-accent transition-colors">Campus Ambassador
+                </h4>
+                <p class="text-sm text-text-secondary">Student Tribe</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications Column -->
+          <div class="reveal delay-100">
+            <h2 class="text-xs font-bold text-accent tracking-widest mb-6 uppercase">Credentials</h2>
+            <h3 class="text-3xl font-bold text-white mb-8">Certifications</h3>
+            <div class="grid grid-cols-1 gap-4">
+              <!-- Cert 1 -->
+              <div class="glass-card p-6 group">
+                <div class="flex justify-between items-start mb-2">
+                  <div class="flex items-center gap-3">
+                    <i data-lucide="award" class="w-4 h-4 text-accent"></i>
+                    <h4 class="text-base font-bold text-white group-hover:text-accent transition-colors">Introduction to
+                      Python</h4>
+                  </div>
+                  <span
+                    class="text-[10px] font-mono text-text-secondary border border-white/10 px-2 py-0.5 rounded">Infosys</span>
+                </div>
+                <p class="text-xs text-text-secondary">Infosys Springboard</p>
+              </div>
+              <!-- Cert 2 -->
+              <div class="glass-card p-6 group">
+                <div class="flex justify-between items-start mb-2">
+                  <div class="flex items-center gap-3">
+                    <i data-lucide="award" class="w-4 h-4 text-accent"></i>
+                    <h4 class="text-base font-bold text-white group-hover:text-accent transition-colors">TCS iON Career
+                      Edge</h4>
+                  </div>
+                  <span
+                    class="text-[10px] font-mono text-text-secondary border border-white/10 px-2 py-0.5 rounded">TCS</span>
+                </div>
+                <p class="text-xs text-text-secondary">Young Professional Certificate</p>
+              </div>
+              <!-- Cert 3 -->
+              <div class="glass-card p-6 group">
+                <div class="flex justify-between items-start mb-2">
+                  <div class="flex items-center gap-3">
+                    <i data-lucide="award" class="w-4 h-4 text-accent"></i>
+                    <h4 class="text-base font-bold text-white group-hover:text-accent transition-colors">Programming in
+                      Java</h4>
+                  </div>
+                  <span
+                    class="text-[10px] font-mono text-text-secondary border border-white/10 px-2 py-0.5 rounded">Infosys</span>
+                </div>
+                <p class="text-xs text-text-secondary">Infosys SpringBoard</p>
+              </div>
+              <!-- Cert 4 -->
+              <div class="glass-card p-6 group">
+                <div class="flex justify-between items-start mb-2">
+                  <div class="flex items-center gap-3">
+                    <i data-lucide="award" class="w-4 h-4 text-accent"></i>
+                    <h4 class="text-base font-bold text-white group-hover:text-accent transition-colors">AI Foundations
+                      Associate</h4>
+                  </div>
+                  <span
+                    class="text-[10px] font-mono text-text-secondary border border-white/10 px-2 py-0.5 rounded">Oracle</span>
+                </div>
+                <p class="text-xs text-text-secondary">Oracle University</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 relative overflow-hidden">
+    <div class="layout-container">
+      <div class="section-glass reveal">
+        <div class="max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+              <h2 class="text-xs font-bold text-accent tracking-widest mb-6 uppercase">Contact</h2>
+              <h3 class="text-3xl font-bold text-white mb-6">Initiate Collaboration</h3>
+              <p class="text-text-secondary text-base mb-10">
+                I am currently open to internship opportunities and technical collaborations. Let's discuss how I can
+                contribute to your engineering team.
+              </p>
+              <div class="flex gap-4">
+                <a href="https://github.com/Manoj-Sanagapalli20" target="_blank"
+                  class="p-4 rounded-xl glass-card hover:bg-white/5 transition-all group hover:scale-110">
+                  <i data-lucide="github"
+                    class="w-6 h-6 text-text-secondary group-hover:text-white transition-colors"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/manoj-sanagapalli-663109335" target="_blank"
+                  class="p-4 rounded-xl glass-card hover:bg-white/5 transition-all group hover:scale-110">
+                  <i data-lucide="linkedin"
+                    class="w-6 h-6 text-text-secondary group-hover:text-white transition-colors"></i>
+                </a>
+                <a href="mailto:shvsmanoj2007@gmail.com"
+                  class="p-4 rounded-xl glass-card hover:bg-white/5 transition-all group hover:scale-110"
+                  aria-label="Email">
+                  <i data-lucide="mail"
+                    class="w-6 h-6 text-text-secondary group-hover:text-white transition-colors"></i>
+                </a>
+                <a href="tel:+918309478980"
+                  class="p-4 rounded-xl glass-card hover:bg-white/5 transition-all group hover:scale-110"
+                  aria-label="Phone">
+                  <i data-lucide="phone"
+                    class="w-6 h-6 text-text-secondary group-hover:text-white transition-colors"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="reveal delay-100">
+              <form id="contact-form" class="space-y-4" novalidate>
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <label for="name"
+                      class="block text-[10px] font-bold text-text-secondary mb-2 uppercase tracking-wide">Name</label>
+                    <input type="text" id="name" required
+                      class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-accent focus:outline-none transition-all placeholder:text-white/10 text-sm focus:shadow-[0_0_15px_rgba(16,185,129,0.1)]"
+                      placeholder="Full Name">
+                  </div>
+                  <div>
+                    <label for="email"
+                      class="block text-[10px] font-bold text-text-secondary mb-2 uppercase tracking-wide">Email</label>
+                    <input type="email" id="email" required
+                      class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-accent focus:outline-none transition-all placeholder:text-white/10 text-sm focus:shadow-[0_0_15px_rgba(16,185,129,0.1)]"
+                      placeholder="email@company.com">
+                  </div>
+                </div>
+                <div>
+                  <label for="message"
+                    class="block text-[10px] font-bold text-text-secondary mb-2 uppercase tracking-wide">Message</label>
+                  <textarea id="message" rows="4" required
+                    class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-accent focus:outline-none transition-all placeholder:text-white/10 text-sm focus:shadow-[0_0_15px_rgba(16,185,129,0.1)]"
+                    placeholder="Project details..."></textarea>
+                </div>
+                <button type="submit" id="send-btn" class="w-full btn-glow-primary py-3">
+                  Send Inquiry
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-white/[0.04] text-center text-text-secondary text-xs bg-[#050507]">
+    <p>&copy; 2026 Manoj Sanagapalli. All rights reserved.</p>
+  </footer>
+
+  <!-- ── TOP HEADER: Engineering phrase typer (isolated IIFE) ── -->
+  <script>
+    (function headerTyper() {
+      var PHRASES = [
+        'ENGINEERING MODE ENABLED',
+        'SYSTEM CALIBRATED',
+        'AI PIPELINE ACTIVE',
+        'PRODUCTION READY'
+      ];
+      var LONGEST = PHRASES.reduce(function (a, b) { return a.length >= b.length ? a : b; }, '');
+      var TYPE_SPEED = 72;    // ms / char — moderate
+      var ERASE_SPEED = 38;    // ms / char — slightly faster
+      var PAUSE_AFTER = 1100;  // ms hold after full phrase
+      var PAUSE_NEXT = 320;   // ms gap before next phrase
+
+      var typed = document.getElementById('sys-typed-text');
+      var wrap = document.getElementById('sys-typing-wrap');
+      if (!typed || !wrap) return;
+
+      /* Lock wrap width to longest phrase so the row never shifts */
+      window.addEventListener('DOMContentLoaded', function () {
+        var ruler = document.createElement('span');
+        var cs = getComputedStyle(wrap);
+        ruler.style.cssText = [
+          'visibility:hidden', 'position:absolute',
+          'font-size:' + cs.fontSize,
+          'font-family:' + cs.fontFamily,
+          'font-weight:' + cs.fontWeight,
+          'letter-spacing:' + cs.letterSpacing,
+          'white-space:nowrap'
+        ].join(';');
+        ruler.textContent = LONGEST;
+        document.body.appendChild(ruler);
+        wrap.style.minWidth = ruler.offsetWidth + 'px';
+        ruler.remove();
+
+        headerLoop();
+      });
+
+      function wait(ms) {
+        return new Promise(function (res) { setTimeout(res, ms); });
+      }
+
+      async function headerLoop() {
+        var i = 0;
+        while (true) {
+          var phrase = PHRASES[i % PHRASES.length];
+          /* Type */
+          for (var c = 0; c <= phrase.length; c++) {
+            typed.textContent = phrase.slice(0, c);
+            await wait(TYPE_SPEED);
+          }
+          /* Hold */
+          await wait(PAUSE_AFTER);
+          /* Erase */
+          for (var c = phrase.length; c >= 0; c--) {
+            typed.textContent = phrase.slice(0, c);
+            await wait(ERASE_SPEED);
+          }
+          await wait(PAUSE_NEXT);
+          i++;
+        }
+      }
+    })();
+  </script>
+
+  <!-- ── Contact Form: mailto handler ── -->
+  <script>
+    (function contactForm() {
+      var form = document.getElementById('contact-form');
+      var btn = document.getElementById('send-btn');
+      if (!form || !btn) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var name = document.getElementById('name').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var message = document.getElementById('message').value.trim();
+
+        /* ── Basic validation ── */
+        if (!name || !email || !message) {
+          /* Highlight empty fields */
+          [['name', name], ['email', email], ['message', message]].forEach(function (pair) {
+            var el = document.getElementById(pair[0]);
+            if (!pair[1]) {
+              el.style.borderColor = 'rgba(239,68,68,0.6)';
+              el.style.boxShadow = '0 0 12px rgba(239,68,68,0.15)';
+              el.addEventListener('input', function () {
+                el.style.borderColor = '';
+                el.style.boxShadow = '';
+              }, { once: true });
+            }
+          });
+          return;
+        }
+
+        /* ── Build mailto URI ── */
+        var subject = encodeURIComponent('Portfolio Inquiry from ' + name);
+        var body = encodeURIComponent(
+          'Name: ' + name + '\n' +
+          'Email: ' + email + '\n\n' +
+          message
+        );
+        var mailto = 'mailto:shvsmanoj2007@gmail.com?subject=' + subject + '&body=' + body;
+
+        /* ── Open mail client ── */
+        window.location.href = mailto;
+
+        /* ── Show confirmation on button ── */
+        btn.textContent = 'Message Sent! ✓';
+        btn.style.background = 'linear-gradient(135deg, #059669 0%, #047857 100%)';
+        btn.disabled = true;
+
+        setTimeout(function () {
+          btn.textContent = 'Send Inquiry';
+          btn.style.background = '';
+          btn.disabled = false;
+          form.reset();
+        }, 3000);
+      });
+    })();
+  </script>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
