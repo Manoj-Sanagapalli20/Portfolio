@@ -106,7 +106,8 @@
               Explore Projects
             </button>
 
-            <a href="/Manoj_Sanagapalli_Resume.pdf" download="Manoj_Sanagapalli_Resume.pdf" class="btn-glass-secondary">
+            <a href="/Manoj_Sanagapalli_Resume.pdf?v=2026" download="Manoj_Sanagapalli_Resume.pdf"
+              class="btn-glass-secondary">
               Download Resume
             </a>
           </div>
@@ -427,19 +428,103 @@
         <!-- Project Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-          <!-- Project 1 -->
-          <article class="proj-card group reveal flex flex-col overflow-hidden">
+          <!-- Project 1: RideShield (Featured) -->
+          <article class="proj-card group reveal flex flex-col overflow-hidden ring-1 ring-accent/50 shadow-[0_0_30px_rgba(16,185,129,0.2)]">
             <!-- Top accent line -->
-            <div class="proj-card-accent"></div>
+            <div class="proj-card-accent bg-gradient-to-r from-accent to-accent/30 shadow-[0_0_15px_rgba(16,185,129,0.8)]"></div>
             <!-- Image -->
+            <div class="proj-img-wrap">
+              <div class="proj-img-bg"
+                style="background-image:url('https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?q=80&w=1080&auto=format&fit=crop')">
+              </div>
+              <div class="proj-img-overlay bg-gradient-to-t from-[#0a0a0e] via-[#0a0a0e]/20 to-accent/20"></div>
+              <span class="proj-number">01</span>
+              <div class="absolute top-4 right-4 bg-accent/20 border border-accent/50 text-accent text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest backdrop-blur-md z-20 flex items-center gap-2 shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+                Featured
+              </div>
+            </div>
+            <!-- Body -->
+            <div class="proj-body flex-1 flex flex-col">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-lg font-bold text-white group-hover:text-accent transition-colors leading-snug">RideShield</h3>
+                <i data-lucide="arrow-up-right"
+                  class="w-4 h-4 text-white/30 group-hover:text-accent transition-colors flex-shrink-0 mt-0.5"></i>
+              </div>
+              <p class="text-text-secondary text-sm leading-relaxed flex-1 mb-5 text-justify hyphens-auto">
+                A full-stack microservice architecture for automated insurance claim processing. Engineered with scalable Node.js APIs, asynchronous RabbitMQ event-driven workflows, and a dynamic React frontend integrated with MongoDB and Stripe for end-to-end reliability.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="proj-badge">Microservices</span>
+                <span class="proj-badge">React.js</span>
+                <span class="proj-badge">Node.js</span>
+                <span class="proj-badge">RabbitMQ</span>
+                <span class="proj-badge">MongoDB</span>
+                <span class="proj-badge">Stripe</span>
+              </div>
+              <div class="proj-links">
+                <a href="#" target="_blank" class="proj-link-primary">
+                  <i data-lucide="external-link" class="w-3 h-3"></i> Live Demo
+                </a>
+                <span class="proj-link-sep">·</span>
+                <a href="https://github.com/Manoj-Sanagapalli20" target="_blank" class="proj-link-secondary">
+                  <i data-lucide="github" class="w-3 h-3"></i> Source
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="proj-card group reveal delay-100 flex flex-col overflow-hidden">
+            <div class="proj-card-accent"></div>
+            <div class="proj-img-wrap">
+              <div class="proj-img-bg"
+                style="background-image:url('https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1080&auto=format&fit=crop')">
+              </div>
+              <div class="proj-img-overlay"></div>
+              <span class="proj-number">02</span>
+            </div>
+            <div class="proj-body flex-1 flex flex-col">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-lg font-bold text-white group-hover:text-accent transition-colors leading-snug">GitHub
+                  Profile Viewer</h3>
+                <i data-lucide="arrow-up-right"
+                  class="w-4 h-4 text-white/30 group-hover:text-accent transition-colors flex-shrink-0 mt-0.5"></i>
+              </div>
+              <p class="text-text-secondary text-sm leading-relaxed flex-1 mb-5 text-justify hyphens-auto">
+                A real-time analytics dashboard that leverages the GitHub REST API to analyze developer activity,
+                visualize contribution patterns, and compare multi-user coding statistics. Engineered with async API
+                orchestration and rate-limit optimization.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="proj-badge">HTML</span>
+                <span class="proj-badge">CSS</span>
+                <span class="proj-badge">JavaScript</span>
+                <span class="proj-badge">GitHub API</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://github-profile-viewer-black-mu.vercel.app/" target="_blank" class="proj-link-primary">
+                  <i data-lucide="external-link" class="w-3 h-3"></i> Live Demo
+                </a>
+                <span class="proj-link-sep">·</span>
+                <a href="https://github.com/Manoj-Sanagapalli20/Github-profile-viewer" target="_blank"
+                  class="proj-link-secondary">
+                  <i data-lucide="github" class="w-3 h-3"></i> Source
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="proj-card group reveal delay-200 flex flex-col overflow-hidden">
+            <div class="proj-card-accent"></div>
             <div class="proj-img-wrap">
               <div class="proj-img-bg"
                 style="background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1080&auto=format&fit=crop')">
               </div>
               <div class="proj-img-overlay"></div>
-              <span class="proj-number">01</span>
+              <span class="proj-number">03</span>
             </div>
-            <!-- Body -->
             <div class="proj-body flex-1 flex flex-col">
               <div class="flex justify-between items-start mb-3">
                 <h3 class="text-lg font-bold text-white group-hover:text-accent transition-colors leading-snug">Cosmic
@@ -468,55 +553,48 @@
             </div>
           </article>
 
-          <!-- Project 2 -->
-          <article class="proj-card group reveal delay-100 flex flex-col overflow-hidden">
+          <!-- Project 4: Blood Test Anomaly Detection -->
+          <article class="proj-card group reveal delay-300 flex flex-col overflow-hidden">
             <div class="proj-card-accent"></div>
             <div class="proj-img-wrap">
               <div class="proj-img-bg"
-                style="background-image:url('https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1080&auto=format&fit=crop')">
+                style="background-image:url('https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=1080&auto=format&fit=crop')">
               </div>
               <div class="proj-img-overlay"></div>
-              <span class="proj-number">02</span>
+              <span class="proj-number">04</span>
             </div>
             <div class="proj-body flex-1 flex flex-col">
               <div class="flex justify-between items-start mb-3">
-                <h3 class="text-lg font-bold text-white group-hover:text-accent transition-colors leading-snug">GitHub
-                  Profile Viewer</h3>
+                <h3 class="text-lg font-bold text-white group-hover:text-accent transition-colors leading-snug">Blood Test Anomaly Detection</h3>
                 <i data-lucide="arrow-up-right"
                   class="w-4 h-4 text-white/30 group-hover:text-accent transition-colors flex-shrink-0 mt-0.5"></i>
               </div>
               <p class="text-text-secondary text-sm leading-relaxed flex-1 mb-5 text-justify hyphens-auto">
-                A sophisticated data visualization platform interfacing with the GitHub REST API to deliver real-time
-                insights, repository analytics, and contribution trends.
+                An advanced unsupervised machine learning pipeline for clinical blood test data. Features a Continuous Soft-Voting Ensemble combining Isolation Forest, LOF, SVM, and KMeans, alongside Explainable AI (SHAP) to accurately detect and interpret biological anomalies without diagnostic label-leakage.
               </p>
               <div class="flex flex-wrap gap-1.5 mb-5">
-                <span class="proj-badge">HTML</span>
-                <span class="proj-badge">CSS</span>
-                <span class="proj-badge">REST API</span>
-                <span class="proj-badge">JavaScript</span>
+                <span class="proj-badge">Python</span>
+                <span class="proj-badge">Scikit-Learn</span>
+                <span class="proj-badge">KMeans</span>
+                <span class="proj-badge">Data Visualization</span>
               </div>
               <div class="proj-links">
-                <a href="https://github-profile-viewer-black-mu.vercel.app/" target="_blank" class="proj-link-primary">
-                  <i data-lucide="external-link" class="w-3 h-3"></i> Live Demo
-                </a>
-                <span class="proj-link-sep">·</span>
-                <a href="https://github.com/Manoj-Sanagapalli20/Github-profile-viewer" target="_blank"
-                  class="proj-link-secondary">
-                  <i data-lucide="github" class="w-3 h-3"></i> Source
+                <a href="https://github.com/Manoj-Sanagapalli20/BloodTest-Anomaly-Detection" target="_blank" class="proj-link-primary">
+                  <i data-lucide="github" class="w-3 h-3"></i> View Source
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- Project 3 -->
-          <article class="proj-card group reveal delay-200 flex flex-col overflow-hidden">
+          <!-- Project 5: Health Risk Predictor -->
+          <article class="proj-card group reveal delay-100 flex flex-col overflow-hidden">
             <div class="proj-card-accent"></div>
             <div class="proj-img-wrap">
               <div class="proj-img-bg"
                 style="background-image:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1080&auto=format&fit=crop')">
               </div>
               <div class="proj-img-overlay"></div>
-              <span class="proj-number">03</span>
+              <span class="proj-number">05</span>
             </div>
             <div class="proj-body flex-1 flex flex-col">
               <div class="flex justify-between items-start mb-3">
@@ -526,8 +604,7 @@
                   class="w-4 h-4 text-white/30 group-hover:text-accent transition-colors flex-shrink-0 mt-0.5"></i>
               </div>
               <p class="text-text-secondary text-sm leading-relaxed flex-1 mb-5 text-justify hyphens-auto">
-                An end-to-end ML pipeline for Health-risk Score prediction implementing Linear, Ridge, and Lasso
-                regression models with high-accuracy score prediction.
+                An end-to-end ML pipeline for Health-risk Score prediction leveraging a comprehensive suite of both supervised and unsupervised algorithms to provide high-accuracy score modeling and effective patient risk evaluation.
               </p>
               <div class="flex flex-wrap gap-1.5 mb-5">
                 <span class="proj-badge">Python</span>
@@ -697,56 +774,91 @@
             <h3 class="text-3xl font-bold text-white mb-8">Certifications</h3>
             <div class="grid grid-cols-1 gap-4">
               <!-- Cert 1 -->
-              <div class="glass-card p-6 group">
-                <div class="flex justify-between items-start mb-2">
-                  <div class="flex items-center gap-3">
-                    <i data-lucide="award" class="w-4 h-4 text-accent"></i>
-                    <h4 class="text-base font-bold text-white group-hover:text-accent transition-colors">Introduction to
-                      Python</h4>
+              <div class="glass-card p-6 group flex flex-col justify-between">
+                <div>
+                  <div class="flex justify-between items-start mb-2">
+                    <div class="flex items-center gap-3">
+                      <i data-lucide="award" class="w-4 h-4 text-accent"></i>
+                      <h4 class="text-base font-bold text-white group-hover:text-accent transition-colors">Programming in Python</h4>
+                    </div>
+                    <span class="text-[10px] font-mono text-text-secondary border border-white/10 px-2 py-0.5 rounded">Infosys</span>
                   </div>
-                  <span
-                    class="text-[10px] font-mono text-text-secondary border border-white/10 px-2 py-0.5 rounded">Infosys</span>
+                  <p class="text-xs text-text-secondary">Infosys Springboard</p>
                 </div>
-                <p class="text-xs text-text-secondary">Infosys Springboard</p>
               </div>
+              
               <!-- Cert 2 -->
-              <div class="glass-card p-6 group">
-                <div class="flex justify-between items-start mb-2">
-                  <div class="flex items-center gap-3">
-                    <i data-lucide="award" class="w-4 h-4 text-accent"></i>
-                    <h4 class="text-base font-bold text-white group-hover:text-accent transition-colors">TCS iON Career
-                      Edge</h4>
+              <div class="glass-card p-6 group flex flex-col justify-between">
+                <div>
+                  <div class="flex justify-between items-start mb-2">
+                    <div class="flex items-center gap-3">
+                      <i data-lucide="award" class="w-4 h-4 text-accent"></i>
+                      <h4 class="text-base font-bold text-white group-hover:text-accent transition-colors">Programming in Java</h4>
+                    </div>
+                    <span class="text-[10px] font-mono text-text-secondary border border-white/10 px-2 py-0.5 rounded">Infosys</span>
                   </div>
-                  <span
-                    class="text-[10px] font-mono text-text-secondary border border-white/10 px-2 py-0.5 rounded">TCS</span>
+                  <p class="text-xs text-text-secondary">Infosys Springboard</p>
                 </div>
-                <p class="text-xs text-text-secondary">Young Professional Certificate</p>
               </div>
+
               <!-- Cert 3 -->
-              <div class="glass-card p-6 group">
-                <div class="flex justify-between items-start mb-2">
-                  <div class="flex items-center gap-3">
-                    <i data-lucide="award" class="w-4 h-4 text-accent"></i>
-                    <h4 class="text-base font-bold text-white group-hover:text-accent transition-colors">Programming in
-                      Java</h4>
+              <div class="glass-card p-6 group flex flex-col justify-between">
+                <div>
+                  <div class="flex justify-between items-start mb-2">
+                    <div class="flex items-center gap-3">
+                      <i data-lucide="award" class="w-4 h-4 text-accent"></i>
+                      <h4 class="text-base font-bold text-white group-hover:text-accent transition-colors">SQL & Relational Databases</h4>
+                    </div>
+                    <span class="text-[10px] font-mono text-text-secondary border border-white/10 px-2 py-0.5 rounded">Cognitive Class</span>
                   </div>
-                  <span
-                    class="text-[10px] font-mono text-text-secondary border border-white/10 px-2 py-0.5 rounded">Infosys</span>
+                  <p class="text-xs text-text-secondary">DataBases</p>
                 </div>
-                <p class="text-xs text-text-secondary">Infosys SpringBoard</p>
               </div>
+              
               <!-- Cert 4 -->
-              <div class="glass-card p-6 group">
-                <div class="flex justify-between items-start mb-2">
-                  <div class="flex items-center gap-3">
-                    <i data-lucide="award" class="w-4 h-4 text-accent"></i>
-                    <h4 class="text-base font-bold text-white group-hover:text-accent transition-colors">AI Foundations
-                      Associate</h4>
+              <div class="glass-card p-6 group flex flex-col justify-between">
+                <div>
+                  <div class="flex justify-between items-start mb-2">
+                    <div class="flex items-center gap-3">
+                      <i data-lucide="award" class="w-4 h-4 text-accent"></i>
+                      <h4 class="text-base font-bold text-white group-hover:text-accent transition-colors">AI Foundations Associate</h4>
+                    </div>
+                    <span class="text-[10px] font-mono text-text-secondary border border-white/10 px-2 py-0.5 rounded">Oracle</span>
                   </div>
-                  <span
-                    class="text-[10px] font-mono text-text-secondary border border-white/10 px-2 py-0.5 rounded">Oracle</span>
+                  <p class="text-xs text-text-secondary">Oracle University</p>
                 </div>
-                <p class="text-xs text-text-secondary">Oracle University</p>
+              </div>
+
+              <!-- Cert 5 (Featured) -->
+              <div class="glass-card p-6 group flex flex-col justify-between ring-1 ring-accent/50 shadow-[0_0_20px_rgba(16,185,129,0.15)] bg-accent/[0.03] relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-transparent"></div>
+                <div>
+                  <div class="flex justify-between items-start mb-2">
+                    <div class="flex items-center gap-3">
+                      <i data-lucide="sparkles" class="w-4 h-4 text-accent animate-pulse"></i>
+                      <h4 class="text-base font-bold text-accent transition-colors leading-tight">IBM Agentic AI Advanced</h4>
+                    </div>
+                    <span class="text-[10px] font-bold text-black bg-accent px-2 py-0.5 rounded tracking-wider shadow-[0_0_10px_rgba(16,185,129,0.5)]">IBM</span>
+                  </div>
+                  <p class="text-xs text-accent/80 flex items-center gap-2 mt-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+                    IBM Skills Network (Advanced)
+                  </p>
+                </div>
+              </div>
+
+              <!-- Cert 6 -->
+              <div class="glass-card p-6 group flex flex-col justify-between">
+                <div>
+                  <div class="flex justify-between items-start mb-2">
+                    <div class="flex items-center gap-3">
+                      <i data-lucide="award" class="w-4 h-4 text-accent"></i>
+                      <h4 class="text-base font-bold text-white group-hover:text-accent transition-colors">Generative AI</h4>
+                    </div>
+                    <span class="text-[10px] font-mono text-text-secondary border border-white/10 px-2 py-0.5 rounded">Coursera</span>
+                  </div>
+                  <p class="text-xs text-text-secondary">Professional Certificate</p>
+                </div>
               </div>
             </div>
           </div>
